@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% console.log(singlePokemon) %>
+    <title><%= singlePokemon.name %></title>
+</head>
+<body style="margin-left: 300px;">
+    <h1>Name: <%= singlePokemon.name %></h1>
+    <h2><img src="<%= singlePokemon.img %>" alt=""></h2>
+    <ul>ID: <%= singlePokemon.id %></ul>
+    <ul>Types:<li><%= singlePokemon.type[0] %></li>
+    <li><%= singlePokemon.type[1] %></li></ul>
+    <ul>Stats:
+        <li>HP: <%= singlePokemon.stats.hp %></li>
+        <li>Attack: <%= singlePokemon.stats.attack %></li>
+        <li>Defense: <%= singlePokemon.stats.defense %></li>
+    </ul>
+    <button type="button"><a href="/pokemon/<%= singlePokemon.id %>/edit" style="text-decoration: none; color: black;">Edit a Pokemon</a></button>
+    </br>
+    <button onclick = "window.location.href='http://localhost:4000/pokemon';">BACK</button>
+</body>
+</html>

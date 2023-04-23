@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit a Pokemon</title>
+</head>
+<body style="margin-left: 150px;">
+    <h1>Edit a Pokemon</h1>
+<form action="/pokemon/<%=singlePokemon.id%>?_method=PUT" method="POST">
+    Name: <input type="text" name="name" value="<%= singlePokemon.name %>">
+    Type: <input type="text" name="type" value="<%= singlePokemon.type %>">
+    HP: <input type="text" name="HP" value="<%= singlePokemon.stats.hp %>">
+    Attack: <input type="text" name="attack" value="<%= singlePokemon.stats.attack %>">
+    Defense: <input type="text" name="defense" value="<%= singlePokemon.stats.defense %>">
+    <br/>
+    <input type="submit" value="submit"/>
+    <br/>
+</form>
+<form action="/pokemon/<%= singlePokemon.id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Pokemon">
+</form>
+</body>
+</html>

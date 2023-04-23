@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register a New Pokemon</title>
+</head>
+<body style="margin-left: 300px;">
+    <h1>Register a New Pokemon</h1>
+    <form method="POST" action="/pokemon">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="image">Image URL:</label>
+        <input type="text" name="img" id="img">
+        <label for="id">ID#:</label>
+        <input type="number" name="id" id="id" min="152">
+        <label for="type">Type:</label>
+        <input type="text" name="type" id="type">
+        <fieldset>
+            <legend>Stats:</legend>
+            <label for="hp">HP:</label>
+            <input type="text" name="hp" id="hp">
+            <label for="attack">Attack:</label>
+            <input type="text" name="attack" id="attack">
+            <label for="defense">Defense:</label>
+            <input type="text" name="defense" id="defense">
+        </fieldset>
+        <input type="submit" value="Create Pokemon" />
+        <br>
+        <button onclick = "window.location.href='http://localhost:4000/pokemon';">BACK</button>
+        </form>
+</body>
+</html>
